@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="octicons/octicons.css">
+    <link rel="stylesheet" href="styles/main.css" media="screen">
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <a class="octicon octicon-mark-github" id="logo"></a>
+
+      <nav class="siteMenu">
+        <input type="text" name="name" value="" placeholder="Search GitHub">
+        <a href="#" class="pull">Pull requests</a>
+        <a href="#" class="issues">Issues</a>
+        <a href="#" class="gist">Gist</a>
+      </nav>
+
+      <nav class="profileNav">
+        <a href="#" class="octicon octicon-bell "></a> <a href="#" class="octicon octicon-triangle-down" id="down"></a>
+        <a href="#" class="octicon octicon-plus"></a> <a href="#" class="octicon octicon-triangle-down" id="down"></a>
+        <a href="#"></a>
+      </nav>
+    </header>
+    <main>
+      <aside class="userDetails">
+        <img class="profilePic"></img>
+
+        <div class="nameBlock">
+          <span id="name"></span>
+          <span id="userName"></span>
+        </div>
+
+        <div class="joinBox">
+          <span class="fa fa-clock-o"></span> <span>Joined :</span>
+          <span id="location">Location : </span>
+          <span id="joined"></span>
+        </div>
+
+        <div class="followBlock">
+          <span></span>
+          <span class="followers"></span>
+
+          <span></span>
+          <span class="starred"></span>
+
+          <span></span>
+          <span class="following"></span>
+        </div>
+
+        <div class="organizations">
+          <span>Organizations</span>
+          <a href="#" class="orgLogo"></a>
+        </div>
+      </aside>
+
+      <section>
+        <nav class="tabs">
+          <a href="#" class="fa fa-plus-square-o"> Contributions</a>
+          <a href="#" class="fa fa-book"> Repositories</a>
+          <a href="#" class="fa fa-rss"> Public Activity</a>
+          <!-- <button class="edit" type="button" name="button">Edit Profile</button> -->
+        </nav>
+        </section>
+
+        <section class="repoNavBar">
+        <nav class="repoSearch">
+          <input type="text" name="name" value="" placeholder="Find a repository...">
+          <button type="button" name="button">Search</button>
+        </nav>
+
+        <nav class="repoNavType">
+          <a href="#">All</a>
+          <a href="#">Public</a>
+          <a href="#">Private</a>
+          <a href="#">Sources</a>
+          <a href="#">Forks</a>
+          <a href="#">Mirrors</a>
+          <button type="button" name="button">New</button>
+        </nav>
+        </section>
+
+        <section class="reposList">
+
+        </section>
+
+    </main>
+    <footer>
+        <span>© 2015 GitHub, Inc.</span>
+
+        <nav class="footerLeft">
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+          <a href="#">Security</a>
+          <a href="#">Contact</a>
+          <a href="#">Help</a>
+        </nav>
+
+        <a class="octicon octicon-mark-github" id="logo"></a>
+
+        <nav class="footerRight">
+          <a href="#">Status</a>
+          <a href="#">API</a>
+          <a href="#">Training</a>
+          <a href="#">Shop</a>
+          <a href="#">Blog</a>
+          <a href="#">About</a>
+          <a href="#">Pricing</a>
+        </nav>
+
+      </footer>
+    <script src="token.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script  src="main.js"></script>
+  </body>
+</html>

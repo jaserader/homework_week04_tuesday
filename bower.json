@@ -8,7 +8,7 @@
   "main": "",
   "moduleType": [],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/jaserader/homework_week04_tuesday",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -18,6 +18,7 @@
   ],
   "dependencies": {
     "neat": "~1.7.2",
-    "jquery": "jQuery#~2.1.4"
+    "jquery": "jQuery#~2.1.4",
+    "bourbon": "~4.2.6"
   }
 }

@@ -1,0 +1,263 @@
+@import "../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
+@import "../bower_components/neat/app/assets/stylesheets/_neat.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+ @include outer-container;
+ font-family: sans-serif;
+}
+
+header {
+  @include span-columns(12);
+  background: #F5F5F5;
+  height: 50px;
+  border-bottom: 1px #E5E5E5 solid;
+  // margin: 0;
+
+  #logo {
+    @include span-columns(1);
+    font-size: 25px;
+    padding: 12px 0px 0px 30px;
+    margin: 0;
+  }
+
+  .siteMenu {
+    @include span-columns(9);
+    margin-top: 12px;
+    height: 30px;
+
+    input {
+      @include span-columns(5);
+      height: 26px;
+    }
+
+    a {
+      display: inline-block;
+      margin-right: 8px;
+      margin-top: 5px;
+      color: #333333;
+      font-family: sans-serif;
+      font-weight: bolder;
+      text-decoration: none;
+      font-size: 13px;
+
+      .pull {
+        @include span-columns(1.4);
+      }
+      .issues,
+      .gist {
+        @include span-columns(1.1);
+      }
+    }
+
+    .octicon {
+      // margin-top: 15px;
+      text-decoration: none;
+      font-size: 16px;
+      font-family: sans-serif;
+      color: #333333;
+    }
+
+    #down {
+      font-size: 5px;
+    }
+  }
+
+  .profileNav {
+    @include span-columns(2);
+    margin-top: 15px;
+    // height: 20px;
+
+    a {
+      color: #333333;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: lighter;
+    }
+  }
+}
+
+main {
+  @include span-columns(12);
+  height: 100%;
+
+  .userDetails {
+  @include span-columns(3);
+  height: 500px;
+
+  .profilePic {
+    @include span-columns(12);
+    margin-top: 20px;
+    border-radius: 10px;
+    height: 225px;
+    }
+
+  .nameBlock{
+    @include span-columns(12);
+    border-bottom: 1px #DDDDDD solid;
+    padding-bottom: 15px;
+    margin-top: 12px;
+
+    #name {
+      font-size: 25px;
+      font-weight: bolder;
+    }
+
+    #userName {
+      display: block;
+      color: #666666;
+      font-size: 20px;
+      font-weight: lighter;
+    }
+  }
+
+  .joinBox {
+    @include span-columns(12);
+    border-bottom: 1px #DDDDDD solid;
+    padding-bottom: 15px;
+
+    span {
+      display: block;
+      color: #666666;
+    }
+
+  }
+
+  .followBlock{
+    @include span-columns(12);
+    border-bottom: 1px #DDDDDD solid;
+    padding-bottom: 15px;
+  }
+}
+
+  .tabs {
+    @include span-columns(9);
+    height: 50px;
+    margin-right: 0;
+    margin-top: 10px;
+    border-bottom: 1px #DDDDDD solid;
+
+    a {
+      @include span-columns(2.5);
+      font-size: 14px;
+      padding-top: 20px;
+      margin-right: 5px;
+      color: #333333;
+      text-decoration: none;
+      text-align: center;
+
+      // .edit {
+      //   margin-top: 15px;
+      //   @include span-columns(2);
+      //   @include shift(5);
+      // }
+    }
+  }
+
+
+
+  .repoNavBar {
+    @include span-columns(9);
+    height: 60px;
+    border-bottom: 1px #DDDDDD solid;
+    margin: 0;
+
+    .repoSearch {
+      @include span-columns(6);
+      margin-top: 10px;
+
+      input {
+        @include span-columns(8);
+        height: 35px;
+        border-radius: 5px;
+        border: 1px #CCCCCC solid;
+      }
+      button {
+        @include span-columns(3);
+          background: #F8F8F8;
+          height: 35px;
+          border-radius: 5px;
+          border: 1px #CCCCCC solid ;
+          font-weight: bolder;
+          font-size: 12px;
+      }
+    }
+
+    .repoNavType{
+      @include span-columns(6);
+      margin-right: 0;
+      // position: relative;
+
+      a{
+        display: inline-block;
+        margin-top: 20px;
+        margin-right: 3px;
+        font-family: sans-serif;
+        font-size: 14px;
+        color: #333333;
+        text-decoration: none;
+      }
+
+      button {
+        background: #83D666;
+        width: 70px;
+        height: 35px;
+        margin-left: 5px;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 12px;
+        font-weight: bolder;
+        border: 1px #5CA941 solid;
+      }
+    }
+  }
+
+  .reposList {
+    @include span-columns(9);
+    height: 100%;
+  }
+}
+
+footer {
+  @include span-columns(12);
+  height: 50px;
+  background: #F5F5F5;
+  display: inline-block;
+  padding-top: 15px;
+
+  span{
+    @include span-columns(1.8);
+    @include shift(.5);
+    font-size: 13px;
+  }
+
+  .footerLeft {
+    @include span-columns(3.5 of 12);
+
+    a {
+      text-decoration: none;
+      font-size: 13px;
+      color: #4078C0;
+    }
+  }
+
+  #logo {
+    @include span-columns(1);
+    font-size: 25px;
+    color: #CCCCCC;
+  }
+
+  .footerRight {
+    @include span-columns(4 of 12);
+    @include shift(.5);
+
+    a {
+      text-decoration: none;
+      font-size: 13px;
+      color: #4078C0;
+    }
+  }
+}
