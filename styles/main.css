@@ -107,7 +107,7 @@ main {
   display: block;
   margin-right: 2.35765%;
   width: 100%;
-  height: 700px; }
+  height: 100%; }
   main:last-child {
     margin-right: 0; }
   main .userDetails {
@@ -154,12 +154,14 @@ main {
       border-bottom: 1px #DDDDDD solid;
       padding-top: 15px;
       padding-bottom: 15px;
-      height: 70px; }
+      height: 85px; }
       main .userDetails .joinBox:last-child {
         margin-right: 0; }
       main .userDetails .joinBox span {
         display: block;
-        color: #666666; }
+        margin-top: 10px;
+        color: #666666;
+        font-size: 12px; }
     main .userDetails .followBlock {
       float: left;
       display: block;
@@ -168,24 +170,32 @@ main {
       border-bottom: 1px #DDDDDD solid;
       padding-top: 15px;
       padding-bottom: 15px;
-      height: 70px; }
+      height: 70px;
+      display: inline-block; }
       main .userDetails .followBlock:last-child {
         margin-right: 0; }
-      main .userDetails .followBlock .num {
+      main .userDetails .followBlock .followers,
+      main .userDetails .followBlock .starred,
+      main .userDetails .followBlock .following {
         float: left;
         display: block;
         margin-right: 2.35765%;
-        width: 14.70196%;
+        width: 23.23176%;
         font-size: 25px;
         font-weight: bold;
         color: #4078C8; }
-        main .userDetails .followBlock .num:last-child {
+        main .userDetails .followBlock .followers:last-child,
+        main .userDetails .followBlock .starred:last-child,
+        main .userDetails .followBlock .following:last-child {
           margin-right: 0; }
     main .userDetails .organizations {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 14.70196%; }
+      width: 14.70196%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-weight: bold; }
       main .userDetails .organizations:last-child {
         margin-right: 0; }
       main .userDetails .organizations .orgLogo {
@@ -193,6 +203,7 @@ main {
         display: block;
         margin-right: 2.35765%;
         width: 100%;
+        margin-top: 15px;
         height: 40px; }
         main .userDetails .organizations .orgLogo:last-child {
           margin-right: 0; }
@@ -287,14 +298,64 @@ main {
         font-size: 12px;
         font-weight: bolder;
         border: 1px #5CA941 solid; }
-  main .reposList {
+  main .repos {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 74.41059%;
     height: 100%; }
-    main .reposList:last-child {
+    main .repos:last-child {
       margin-right: 0; }
+    main .repos .repo {
+      height: 100px;
+      padding-top: 30px;
+      border-bottom: 1px #DDDDDD solid; }
+      main .repos .repo .repoName {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 74.41059%;
+        font-size: 20px;
+        color: #4078C0;
+        font-weight: bold;
+        text-decoration: none; }
+        main .repos .repo .repoName:last-child {
+          margin-right: 0; }
+      main .repos .repo .language {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 6.17215%;
+        margin-left: 5.97086%;
+        color: #888888;
+        font-size: 14px;
+        text-align: right; }
+        main .repos .repo .language:last-child {
+          margin-right: 0; }
+      main .repos .repo #starGazers {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 1.90725%;
+        display: inline-block;
+        margin-top: 2px;
+        color: #888888;
+        font-size: 14px; }
+        main .repos .repo #starGazers:last-child {
+          margin-right: 0; }
+      main .repos .repo #forks {
+        color: #888888;
+        font-size: 14px; }
+      main .repos .repo .updated {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 40.29137%;
+        margin-top: 10px;
+        color: #888888;
+        font-size: 14px; }
+        main .repos .repo .updated:last-child {
+          margin-right: 0; }
 
 footer {
   float: left;

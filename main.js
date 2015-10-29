@@ -9,33 +9,12 @@ console.log('get requests');
 //jQuery selector
 
 var body = $('body')
-
+var repos = $('.repos');
 
 //jQuery methods (like for ajax)
 function processData(data) {
   //process data
 }
-
-$.getJSON('https://api.github.com/users/jaserader').done(function(data) {
-  console.log(arguments);
-
-  processData(data)
-})
-
-$.getJSON('https://api.github.com/users/jaserader/repos').done(function(data) {
-  console.log(arguments);
-  //do the work with this data in here
-  // var repoList = $(".reposList");
-  // var repo = $(".repo")
-  //
-  //   for(var i = 0; i < array.length; i++){
-  //     $(".repoName").append(data.name);
-  console.log(data.name);
-  // }
-  var url = api.github.com/users/jaserader/repos;
-
-  processData(data)
-})
 
 $.getJSON('https://api.github.com/users/jaserader').done(function(data) {
 
@@ -46,29 +25,40 @@ $.getJSON('https://api.github.com/users/jaserader').done(function(data) {
   var joined = $("#joined");
   var followers = $(".followers");
   var following = $(".following");
+  var organizationsLogo = $(".orgLogo")
 
    profilePic.attr('src', data.avatar_url);
+   organizationsLogo.attr('src', data.organizations_url);
+
    name.append(data.name);
    userName.append(data.login);
    location.append(data.location);
-   joined.append(data.joined);
+   joined.append(data.created_at);
    followers.append(data.followers);
-  //  $(".starred").prepend(data.starred_url);
    following.append(data.following);
-   $(".orgLogo").attr('src', data.organizations_url);
 
+});
 
-  processData(data)
-})
+$.getJSON('https://api.github.com/users/jaserader/repos').done(function(data) {
+  data.forEach(function(item){
+    var article = $('<article class="repo"></article>');
+    var header = $('<a class="repoName">' + item.name +'</a>');
+    var updated = $('<span class="updated">' + item.updated_at + '</span>');
+    var language = $('<a class="language">' + item.language + '</a>');
+    var starGazers = $('<a class="octicon octicon-star" id="starGazers">' + item.stargazers_count + '</a>');
+    var forks = $('<a class="octicon octicon-git-branch" id="forks">' + item.forks_count + '</a>');
 
-var contribTab = $("#contrib");
-var repoTab = $("#repoTab");
-var pubActTab = $('#activityTab');
+    starGazers.attr('href', item.stargazers_url);
+    header.attr('href', item.url);
+    forks.attr('href', item.forks_url);
 
-repoTab.click(function(){
-  console.log("poke");
+    article.append(header);
+    article.append(language);
+    article.append(starGazers);
+    article.append(forks);
+    article.append(updated);
 
-
-
-  // repoTab.css("border-left: 1px #DDDDDD solid")
-})
+    // add it all to the screen
+    repos.append(article);
+    });
+  });

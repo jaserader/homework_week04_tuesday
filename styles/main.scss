@@ -82,7 +82,7 @@ header {
 
 main {
   @include span-columns(12);
-  height: 700px;
+  height: 100%;
 
   .userDetails {
   @include span-columns(3);
@@ -119,13 +119,18 @@ main {
     border-bottom: 1px #DDDDDD solid;
     padding-top: 15px;
     padding-bottom: 15px;
-    height: 70px;
+    height: 85px;
 
     span {
       display: block;
+      margin-top: 10px;
       color: #666666;
+      font-size: 12px;
     }
 
+    #joined {
+
+    }
   }
 
   .followBlock{
@@ -134,9 +139,12 @@ main {
     padding-top: 15px;
     padding-bottom: 15px;
     height: 70px;
+    display: inline-block;
 
-    .num {
-      @include span-columns(2);
+    .followers,
+    .starred,
+    .following {
+      @include span-columns(3);
       font-size: 25px;
       font-weight: bold;
       color: #4078C8;
@@ -149,9 +157,13 @@ main {
 
   .organizations{
     @include span-columns(2);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
 
     .orgLogo {
       @include span-columns(12);
+      margin-top: 15px;
       height: 40px;
     }
   }
@@ -239,9 +251,47 @@ main {
     }
   }
 
-  .reposList {
+  .repos {
     @include span-columns(9);
     height: 100%;
+
+    .repo {
+      height: 100px;
+      padding-top: 30px;
+      border-bottom: 1px #DDDDDD solid;
+
+    .repoName {
+      @include span-columns(9);
+      font-size: 20px;
+      color: #4078C0;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .language {
+      @include span-columns(1);
+      @include shift(.7);
+      color: #888888;
+      font-size: 14px;
+      text-align: right;
+    }
+    #starGazers{
+      @include span-columns(.5);
+      display: inline-block;
+      margin-top: 2px;
+      color: #888888;
+      font-size: 14px;
+    }
+    #forks {
+      color: #888888;
+      font-size: 14px;
+    }
+    .updated{
+      @include span-columns(5);
+      margin-top: 10px;
+      color: #888888;
+      font-size: 14px;
+    }
+    }
   }
 }
 
