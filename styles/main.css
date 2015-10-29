@@ -107,7 +107,7 @@ main {
   display: block;
   margin-right: 2.35765%;
   width: 100%;
-  height: 100%; }
+  height: 700px; }
   main:last-child {
     margin-right: 0; }
   main .userDetails {
@@ -152,7 +152,9 @@ main {
       margin-right: 2.35765%;
       width: 100%;
       border-bottom: 1px #DDDDDD solid;
-      padding-bottom: 15px; }
+      padding-top: 15px;
+      padding-bottom: 15px;
+      height: 70px; }
       main .userDetails .joinBox:last-child {
         margin-right: 0; }
       main .userDetails .joinBox span {
@@ -164,9 +166,36 @@ main {
       margin-right: 2.35765%;
       width: 100%;
       border-bottom: 1px #DDDDDD solid;
-      padding-bottom: 15px; }
+      padding-top: 15px;
+      padding-bottom: 15px;
+      height: 70px; }
       main .userDetails .followBlock:last-child {
         margin-right: 0; }
+      main .userDetails .followBlock .num {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 14.70196%;
+        font-size: 25px;
+        font-weight: bold;
+        color: #4078C8; }
+        main .userDetails .followBlock .num:last-child {
+          margin-right: 0; }
+    main .userDetails .organizations {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 14.70196%; }
+      main .userDetails .organizations:last-child {
+        margin-right: 0; }
+      main .userDetails .organizations .orgLogo {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 100%;
+        height: 40px; }
+        main .userDetails .organizations .orgLogo:last-child {
+          margin-right: 0; }
   main .tabs {
     float: left;
     display: block;

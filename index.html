@@ -34,33 +34,33 @@
         </div>
 
         <div class="joinBox">
-          <span class="fa fa-clock-o"></span> <span>Joined :</span>
+          <span class="fa fa-clock-o"> Joined : </span>
           <span id="location">Location : </span>
           <span id="joined"></span>
         </div>
 
         <div class="followBlock">
-          <span></span>
-          <span class="followers"></span>
+          <span class="num followers"></span>
+          <span>Followers</span>
 
-          <span></span>
-          <span class="starred"></span>
+          <span class="num starred"></span>
+          <span>Starred</span>
 
-          <span></span>
-          <span class="following"></span>
+          <span class="num following"></span>
+          <span>Following</span>
         </div>
 
         <div class="organizations">
-          <span>Organizations</span>
-          <a href="#" class="orgLogo"></a>
+          Organizations
+          <img class="orgLogo"></img>
         </div>
       </aside>
 
       <section>
         <nav class="tabs">
-          <a href="#" class="fa fa-plus-square-o"> Contributions</a>
-          <a href="#" class="fa fa-book"> Repositories</a>
-          <a href="#" class="fa fa-rss"> Public Activity</a>
+          <a href="#" class="fa fa-plus-square-o" id="contrib"> Contributions</a>
+          <a href="#" class="fa fa-book" id="repoTab"> Repositories</a>
+          <a href="#" class="fa fa-rss" id="activityTab"> Public Activity</a>
           <!-- <button class="edit" type="button" name="button">Edit Profile</button> -->
         </nav>
         </section>
@@ -83,6 +83,12 @@
         </section>
 
         <section class="reposList">
+          <div class="repo">
+            <a href="#" id="repoName"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <time class="updatedLast"></time>
+          </div>
 
         </section>
 

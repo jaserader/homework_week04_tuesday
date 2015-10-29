@@ -82,7 +82,7 @@ header {
 
 main {
   @include span-columns(12);
-  height: 100%;
+  height: 700px;
 
   .userDetails {
   @include span-columns(3);
@@ -117,7 +117,9 @@ main {
   .joinBox {
     @include span-columns(12);
     border-bottom: 1px #DDDDDD solid;
+    padding-top: 15px;
     padding-bottom: 15px;
+    height: 70px;
 
     span {
       display: block;
@@ -129,7 +131,29 @@ main {
   .followBlock{
     @include span-columns(12);
     border-bottom: 1px #DDDDDD solid;
+    padding-top: 15px;
     padding-bottom: 15px;
+    height: 70px;
+
+    .num {
+      @include span-columns(2);
+      font-size: 25px;
+      font-weight: bold;
+      color: #4078C8;
+    }
+
+    span {
+
+    }
+  }
+
+  .organizations{
+    @include span-columns(2);
+
+    .orgLogo {
+      @include span-columns(12);
+      height: 40px;
+    }
   }
 }
 

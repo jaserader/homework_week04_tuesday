@@ -25,6 +25,14 @@ $.getJSON('https://api.github.com/users/jaserader').done(function(data) {
 $.getJSON('https://api.github.com/users/jaserader/repos').done(function(data) {
   console.log(arguments);
   //do the work with this data in here
+  // var repoList = $(".reposList");
+  // var repo = $(".repo")
+  //
+  //   for(var i = 0; i < array.length; i++){
+  //     $(".repoName").append(data.name);
+  console.log(data.name);
+  // }
+  var url = api.github.com/users/jaserader/repos;
 
   processData(data)
 })
@@ -47,9 +55,20 @@ $.getJSON('https://api.github.com/users/jaserader').done(function(data) {
    followers.append(data.followers);
   //  $(".starred").prepend(data.starred_url);
    following.append(data.following);
+   $(".orgLogo").attr('src', data.organizations_url);
 
 
   processData(data)
 })
 
-$.getJson("")
+var contribTab = $("#contrib");
+var repoTab = $("#repoTab");
+var pubActTab = $('#activityTab');
+
+repoTab.click(function(){
+  console.log("poke");
+
+
+
+  // repoTab.css("border-left: 1px #DDDDDD solid")
+})
