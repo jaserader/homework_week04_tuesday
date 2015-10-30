@@ -19,6 +19,7 @@ function processData(data) {
 $.getJSON('https://api.github.com/users/jaserader').done(function(data) {
 
   var profilePic = $(".profilePic");
+  var smallProfilePic = $(".smallProfilePic");
   var name = $("#name");
   var userName = $("#userName");
   var location = $("#location");
@@ -28,6 +29,7 @@ $.getJSON('https://api.github.com/users/jaserader').done(function(data) {
   var organizationsLogo = $(".orgLogo")
 
    profilePic.attr('src', data.avatar_url);
+   smallProfilePic.attr('src', data.avatar_url);
    organizationsLogo.attr('src', data.organizations_url);
 
    name.append(data.name);

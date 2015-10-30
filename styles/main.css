@@ -53,7 +53,9 @@ header {
       display: block;
       margin-right: 2.35765%;
       width: 40.29137%;
-      height: 26px; }
+      height: 26px;
+      padding-left: 8px;
+      font-size: 12px; }
       header .siteMenu input:last-child {
         margin-right: 0; }
     header .siteMenu a {
@@ -64,7 +66,10 @@ header {
       font-family: sans-serif;
       font-weight: bolder;
       text-decoration: none;
-      font-size: 13px; }
+      font-size: 13px;
+      font-weight: bolder; }
+      header .siteMenu a:hover {
+        color: #4078C0; }
       header .siteMenu a .pull {
         float: left;
         display: block;
@@ -96,11 +101,36 @@ header {
     margin-top: 15px; }
     header .profileNav:last-child {
       margin-right: 0; }
+    header .profileNav .smallProfilePic {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 14.70196%;
+      height: 25px;
+      border-radius: 5px;
+      position: relative; }
+      header .profileNav .smallProfilePic:last-child {
+        margin-right: 0; }
+      header .profileNav .smallProfilePic i {
+        position: absolute;
+        top: 3px;
+        font-size: 12px; }
     header .profileNav a {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 17.2609%;
+      margin-right: 5px;
       color: #333333;
       text-decoration: none;
-      font-size: 20px;
+      font-size: 22px;
       font-weight: lighter; }
+      header .profileNav a:last-child {
+        margin-right: 0; }
+      header .profileNav a:hover {
+        color: #4078C0; }
+      header .profileNav a #down {
+        font-size: 12px; }
 
 main {
   float: left;
@@ -171,9 +201,13 @@ main {
       padding-top: 15px;
       padding-bottom: 15px;
       height: 70px;
-      display: inline-block; }
+      position: relative; }
       main .userDetails .followBlock:last-child {
         margin-right: 0; }
+      main .userDetails .followBlock span {
+        position: absolute;
+        font-size: 12px;
+        color: #666666; }
       main .userDetails .followBlock .followers,
       main .userDetails .followBlock .starred,
       main .userDetails .followBlock .following {
@@ -183,11 +217,28 @@ main {
         width: 23.23176%;
         font-size: 25px;
         font-weight: bold;
-        color: #4078C8; }
+        color: #4078C8;
+        position: absolute;
+        margin-bottom: 10px; }
         main .userDetails .followBlock .followers:last-child,
         main .userDetails .followBlock .starred:last-child,
         main .userDetails .followBlock .following:last-child {
           margin-right: 0; }
+      main .userDetails .followBlock .followers {
+        left: 47px; }
+      main .userDetails .followBlock .starred {
+        left: 122px; }
+      main .userDetails .followBlock .following {
+        left: 194px; }
+      main .userDetails .followBlock .followSpan {
+        top: 40px;
+        left: 30px; }
+      main .userDetails .followBlock .starredSpan {
+        top: 40px;
+        left: 108px; }
+      main .userDetails .followBlock .followingSpan {
+        top: 40px;
+        left: 175px; }
     main .userDetails .organizations {
       float: left;
       display: block;
@@ -212,7 +263,7 @@ main {
     display: block;
     margin-right: 2.35765%;
     width: 74.41059%;
-    height: 50px;
+    height: 40px;
     margin-right: 0;
     margin-top: 10px;
     border-bottom: 1px #DDDDDD solid; }
@@ -223,14 +274,20 @@ main {
       display: block;
       margin-right: 2.35765%;
       width: 18.96686%;
+      height: 40px;
       font-size: 14px;
-      padding-top: 20px;
+      padding-top: 15px;
       margin-right: 5px;
       color: #333333;
       text-decoration: none;
       text-align: center; }
       main .tabs a:last-child {
         margin-right: 0; }
+      main .tabs a:focus {
+        border-bottom: 1px #fff solid;
+        border-left: 1px #DDDDDD solid;
+        border-right: 1px #DDDDDD solid;
+        border-top: 1px #DDDDDD solid; }
   main .repoNavBar {
     float: left;
     display: block;
@@ -256,7 +313,9 @@ main {
         width: 65.88078%;
         height: 35px;
         border-radius: 5px;
-        border: 1px #CCCCCC solid; }
+        border: 1px #CCCCCC solid;
+        padding-left: 8px;
+        font-size: 12px; }
         main .repoNavBar .repoSearch input:last-child {
           margin-right: 0; }
       main .repoNavBar .repoSearch button {
@@ -272,6 +331,8 @@ main {
         font-size: 12px; }
         main .repoNavBar .repoSearch button:last-child {
           margin-right: 0; }
+        main .repoNavBar .repoSearch button:hover {
+          background: #CCCCCC; }
     main .repoNavBar .repoNavType {
       float: left;
       display: block;
@@ -286,8 +347,14 @@ main {
         margin-right: 3px;
         font-family: sans-serif;
         font-size: 14px;
-        color: #333333;
+        color: #4078C0;
         text-decoration: none; }
+        main .repoNavBar .repoNavType a:focus {
+          color: #000;
+          font-weight: bolder;
+          text-decoration: none; }
+        main .repoNavBar .repoNavType a:hover {
+          text-decoration: underline; }
       main .repoNavBar .repoNavType button {
         background: #83D666;
         width: 70px;
@@ -298,6 +365,8 @@ main {
         font-size: 12px;
         font-weight: bolder;
         border: 1px #5CA941 solid; }
+        main .repoNavBar .repoNavType button:hover {
+          background: #5CA941; }
   main .repos {
     float: left;
     display: block;
@@ -321,6 +390,8 @@ main {
         text-decoration: none; }
         main .repos .repo .repoName:last-child {
           margin-right: 0; }
+        main .repos .repo .repoName:hover {
+          text-decoration: underline; }
       main .repos .repo .language {
         float: left;
         display: block;
@@ -387,12 +458,16 @@ footer {
     footer .footerLeft a {
       text-decoration: none;
       font-size: 13px;
-      color: #4078C0; }
+      color: #4078C0;
+      margin-right: 10px; }
+      footer .footerLeft a:hover {
+        text-decoration: underline; }
   footer #logo {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 6.17215%;
+    margin-left: 4.2649%;
     font-size: 25px;
     color: #CCCCCC; }
     footer #logo:last-child {
@@ -408,4 +483,7 @@ footer {
     footer .footerRight a {
       text-decoration: none;
       font-size: 13px;
-      color: #4078C0; }
+      color: #4078C0;
+      margin-right: 10px; }
+      footer .footerRight a:hover {
+        text-decoration: underline; }

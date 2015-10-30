@@ -32,6 +32,8 @@ header {
     input {
       @include span-columns(5);
       height: 26px;
+      padding-left: 8px;
+      font-size: 12px;
     }
 
     a {
@@ -43,6 +45,11 @@ header {
       font-weight: bolder;
       text-decoration: none;
       font-size: 13px;
+      font-weight: bolder;
+
+      &:hover{
+        color: #4078C0;
+      }
 
       .pull {
         @include span-columns(1.4);
@@ -69,13 +76,35 @@ header {
   .profileNav {
     @include span-columns(2);
     margin-top: 15px;
-    // height: 20px;
+
+    .smallProfilePic {
+      @include span-columns(2);
+      height: 25px;
+      border-radius: 5px;
+      position: relative;
+
+      i {
+        position: absolute;
+        top: 3px;
+        font-size: 12px;
+      }
+    }
 
     a {
+      @include span-columns(2.3);
+      margin-right: 5px;
       color: #333333;
       text-decoration: none;
-      font-size: 20px;
+      font-size: 22px;
       font-weight: lighter;
+
+      &:hover {
+        color: #4078C0;
+      }
+
+      #down {
+          font-size: 12px;
+        }
     }
   }
 }
@@ -139,7 +168,13 @@ main {
     padding-top: 15px;
     padding-bottom: 15px;
     height: 70px;
-    display: inline-block;
+    position: relative;
+
+    span {
+      position: absolute;
+      font-size: 12px;
+      color: #666666;
+    }
 
     .followers,
     .starred,
@@ -148,10 +183,35 @@ main {
       font-size: 25px;
       font-weight: bold;
       color: #4078C8;
+      position: absolute;
+      margin-bottom: 10px;
     }
 
-    span {
+    .followers {
+      left: 47px;
+    }
 
+    .starred {
+      left: 122px;
+    }
+
+    .following {
+      left: 194px;
+    }
+
+    .followSpan{
+      top: 40px;
+      left: 30px;
+    }
+
+    .starredSpan {
+      top: 40px;
+      left: 108px;
+    }
+
+    .followingSpan{
+      top: 40px;
+      left: 175px;
     }
   }
 
@@ -171,25 +231,27 @@ main {
 
   .tabs {
     @include span-columns(9);
-    height: 50px;
+    height: 40px;
     margin-right: 0;
     margin-top: 10px;
     border-bottom: 1px #DDDDDD solid;
 
     a {
       @include span-columns(2.5);
+      height: 40px;
       font-size: 14px;
-      padding-top: 20px;
+      padding-top: 15px;
       margin-right: 5px;
       color: #333333;
       text-decoration: none;
       text-align: center;
 
-      // .edit {
-      //   margin-top: 15px;
-      //   @include span-columns(2);
-      //   @include shift(5);
-      // }
+      &:focus{
+        border-bottom: 1px #fff solid;
+        border-left:1px #DDDDDD solid;
+        border-right:1px #DDDDDD solid;
+        border-top: 1px #DDDDDD solid;
+      }
     }
   }
 
@@ -210,6 +272,8 @@ main {
         height: 35px;
         border-radius: 5px;
         border: 1px #CCCCCC solid;
+        padding-left: 8px;
+        font-size: 12px;
       }
       button {
         @include span-columns(3);
@@ -219,6 +283,10 @@ main {
           border: 1px #CCCCCC solid ;
           font-weight: bolder;
           font-size: 12px;
+
+          &:hover {
+            background: #CCCCCC;
+          }
       }
     }
 
@@ -233,8 +301,18 @@ main {
         margin-right: 3px;
         font-family: sans-serif;
         font-size: 14px;
-        color: #333333;
+        color: #4078C0;
         text-decoration: none;
+
+        &:focus {
+          color: #000;
+          font-weight: bolder;
+          text-decoration: none;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
 
       button {
@@ -247,6 +325,10 @@ main {
         font-size: 12px;
         font-weight: bolder;
         border: 1px #5CA941 solid;
+
+        &:hover {
+          background: #5CA941;
+        }
       }
     }
   }
@@ -266,6 +348,10 @@ main {
       color: #4078C0;
       font-weight: bold;
       text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
     .language {
       @include span-columns(1);
@@ -315,11 +401,17 @@ footer {
       text-decoration: none;
       font-size: 13px;
       color: #4078C0;
+      margin-right: 10px;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
   #logo {
     @include span-columns(1);
+    @include shift(.5);
     font-size: 25px;
     color: #CCCCCC;
   }
@@ -332,6 +424,11 @@ footer {
       text-decoration: none;
       font-size: 13px;
       color: #4078C0;
+      margin-right: 10px;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
