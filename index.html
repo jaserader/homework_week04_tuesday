@@ -18,9 +18,14 @@
       </nav>
 
       <nav class="profileNav">
-        <a href="#"> <i class="octicon octicon-bell"></i></a>
+        <a href="#"> <i class="octicon octicon-bell"></i>
+          <ul class="plusDropMenu">
+            <li><a href="#" class="top">New Repository</a></li>
+            <li><a href="#" class="bottom">New Organization</a></li>
+          </ul>
+          </a>
         <a href="#" ><i class="octicon octicon-plus"></i> <i class="octicon octicon-triangle-down" id="down"></i></a>
-        <img class="smallProfilePic"><i class="octicon octicon-triangle-down" id="down"></i></img>
+        <a href="#"class="smallPicLink"><img class="smallProfilePic"></img><i class="octicon octicon-triangle-down" id="down"></i></a>
       </nav>
     </header>
     <main>
@@ -108,6 +113,7 @@
 
       </footer>
     <script src="token.js"></script>
+    <script src="bower_components/moment/min/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
     <script  src="main.js"></script>
   </body>

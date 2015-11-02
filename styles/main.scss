@@ -76,23 +76,29 @@ header {
   .profileNav {
     @include span-columns(2);
     margin-top: 15px;
+    font-size: 12px;
+
+    .smallPicLink{
+      width: 100px;
+      margin-left: 4px;
 
     .smallProfilePic {
-      @include span-columns(2);
+      @include span-columns(3);
       height: 25px;
       border-radius: 5px;
       position: relative;
 
-      i {
+      #down {
         position: absolute;
         top: 3px;
-        font-size: 12px;
+        font-size: 8px;
       }
     }
+  }
 
     a {
       @include span-columns(2.3);
-      margin-right: 5px;
+      margin-right: 0px;
       color: #333333;
       text-decoration: none;
       font-size: 22px;
@@ -104,8 +110,44 @@ header {
 
       #down {
           font-size: 12px;
-        }
+      }
     }
+
+    .plusDropMenu {
+      display: none;
+      position: relative;
+
+      li {
+        top: 27px;
+        right: 103px;
+        position: absolute;
+        display: block;
+        width: 150px;
+        height: 35px;
+        list-style: none;
+
+        a {
+          display: block;
+          background: #fff;
+          width: 150px;
+          height: 35px;
+          font-size: 12px;
+          font-weight: normal;
+          padding: 10px 10px 10px 5px;
+          border: 1px #C8C8C8 solid;
+          }
+            .top {
+              border-top: 1px white solid;
+              }
+            .bottom {
+              border-bottom: 1px white solid;
+        }
+      }
+    }
+      .plusDropMenu:focus {
+        display: block;
+        position: absolute;
+      }
   }
 }
 

@@ -10,11 +10,9 @@ console.log('get requests');
 
 var body = $('body')
 var repos = $('.repos');
-
-//jQuery methods (like for ajax)
-function processData(data) {
-  //process data
-}
+//
+// var moment = require('moment');
+// moment().format();
 
 $.getJSON('https://api.github.com/users/jaserader').done(function(data) {
 
