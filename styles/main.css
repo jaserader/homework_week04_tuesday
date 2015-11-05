@@ -409,12 +409,13 @@ main {
     main .repos .repo {
       height: 100px;
       padding-top: 30px;
-      border-bottom: 1px #DDDDDD solid; }
+      border-bottom: 1px #DDDDDD solid;
+      position: relative; }
       main .repos .repo .repoName {
         float: left;
         display: block;
         margin-right: 2.35765%;
-        width: 74.41059%;
+        width: 40.29137%;
         font-size: 20px;
         color: #4078C0;
         font-weight: bold;
@@ -423,36 +424,37 @@ main {
           margin-right: 0; }
         main .repos .repo .repoName:hover {
           text-decoration: underline; }
-      main .repos .repo .language {
+      main .repos .repo div {
         float: left;
         display: block;
         margin-right: 2.35765%;
-        width: 6.17215%;
-        margin-left: 5.97086%;
-        color: #888888;
-        font-size: 14px;
-        text-align: right; }
-        main .repos .repo .language:last-child {
+        width: 14.70196%;
+        position: absolute;
+        float: right;
+        right: 0; }
+        main .repos .repo div:last-child {
           margin-right: 0; }
-      main .repos .repo #starGazers {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 1.90725%;
-        display: inline-block;
-        margin-top: 2px;
-        color: #888888;
-        font-size: 14px; }
-        main .repos .repo #starGazers:last-child {
-          margin-right: 0; }
-      main .repos .repo #forks {
-        color: #888888;
-        font-size: 14px; }
+        main .repos .repo div .language {
+          width: 54.17215%;
+          color: #888888;
+          font-size: 14px;
+          text-align: right; }
+        main .repos .repo div #starGazers {
+          width: 25px;
+          margin-top: 2px;
+          color: #888888;
+          font-size: 14px; }
+        main .repos .repo div #forks {
+          color: #888888;
+          font-size: 14px; }
       main .repos .repo .updated {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 40.29137%;
+        position: relative;
+        top: 25px;
+        right: 43%;
         margin-top: 10px;
         color: #888888;
         font-size: 14px; }

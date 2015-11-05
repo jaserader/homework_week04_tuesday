@@ -25,39 +25,11 @@
           </ul>
           </a>
         <a href="#" ><i class="octicon octicon-plus"></i> <i class="octicon octicon-triangle-down" id="down"></i></a>
-        <a href="#"class="smallPicLink"><img class="smallProfilePic"></img><i class="octicon octicon-triangle-down" id="down"></i></a>
+        <a href="#"class="smallPicLink"><i class="octicon octicon-triangle-down" id="down"></i></a>
       </nav>
     </header>
     <main>
-      <aside class="userDetails">
-        <img class="profilePic"></img>
-
-        <div class="nameBlock">
-          <span id="name"></span>
-          <span id="userName"></span>
-        </div>
-
-        <div class="joinBox">
-          <span class="octicon octicon-clock" id="joined">  Joined: </span>
-          <span class="octicon octicon-location" id="location">  Location: </span>
-        </div>
-
-        <div class="followBlock">
-          <span class="num followers"></span>
-          <span class="followSpan">Follower</span>
-
-          <span class="num starred">2</span>
-          <span class="starredSpan">Starred</span>
-
-          <span class="num following"></span>
-          <span class="followingSpan">Following</span>
-        </div>
-
-        <div class="organizations">
-          Organizations
-          <img class="orgLogo"></img>
-        </div>
-      </aside>
+      <aside class="userDetails"></aside>
 
       <section>
         <nav class="tabs">
@@ -112,9 +84,63 @@
         </nav>
 
       </footer>
-    <script src="token.js"></script>
-    <script src="bower_components/moment/min/moment.min.js"></script>
+
+      <script type="text/template" id="smallProfilePic">
+
+        <img class="smallProfilePic"></img>
+
+      </script>
+
+    <script type="text/template" id="userDetails">
+      <img class="profilePic" src="<%= profilePic %>"/>
+
+      <div class="nameBlock">
+        <span id="name"><%= name %></span>
+        <span id="userName"><%= username %></span>
+      </div>
+
+      <div class="joinBox">
+        <span class="octicon octicon-clock" id="joined">  Joined: <%= joined %></span>
+        <span class="octicon octicon-location" id="location">  Location: <%= location %></span>
+      </div>
+
+      <div class="followBlock">
+        <span class="num followers"><%= followers %></span>
+        <span class="followSpan">Follower</span>
+
+        <span class="num starred"><%= starred %></span>
+        <span class="starredSpan">Starred</span>
+
+        <span class="num following"><%= following %></span>
+        <span class="followingSpan">Following</span>
+      </div>
+
+      <div class="organizations">
+        Organizations
+        <img class="<%= orgLogo %>"></img>
+      </div>
+    </script>
+
+    <script type="text/template" id="repoList">
+
+      <% repos2.forEach(function(repo) { %>
+        <article class="repo">
+          <a class="repoName"><%= repo.name %></a>
+          <span class="updated"><%= repo.updated_at %></span>
+          <div class="">
+            <a class="language"><%= repo.language %></a>
+            <a class="octicon octicon-star" id="starGazers"><%= repo.stargazers_count %></a>
+            <a class="octicon octicon-git-branch" id="forks"><%= repo.forks_count %></a>
+          </div>
+        </article>
+      <% }); %>
+
+    </script>
+
+    <!-- <script src="bower_components/moment/min/moment.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
-    <script  src="main.js"></script>
+    <script src="token.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
