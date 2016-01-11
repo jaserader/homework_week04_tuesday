@@ -73,6 +73,11 @@ function displayUser(data){
   var templateHtml = detailsContainer.html();
   var template = _.template(templateHtml);
 
+  var date = data.created_at;
+  // var momentDateFormatted = moment(date).format("MMM DD HH:mm Z");
+  console.log(date);
+  // console.log(momentDateFormatted);
+
   var data = {
     name: data.name,
     username: data.login,
